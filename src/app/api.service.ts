@@ -8,16 +8,22 @@ import { catchError, Observable } from 'rxjs';
 export class ApiService {
     constructor() { }
 
-    private apiUrl = "https://jsonplaceholder.typicode.com/todos/1"
+    private popUrl = 'https://api.worldbank.org/v2/country/'
+    private baseUrl = 'https://api.worldbank.org/v2';
     http = inject(HttpClient)
-    
-    
-    getPosts(){
-       
-     return this.http.get<any>(this.apiUrl).pipe(catchError(this.handleError));
-     
-    }
+   
 
+    getCountryData(countryCode: string): Observable<any> {
+      const url = `${this.baseUrl}/country/${countryCode}?format=json`;
+   
+      return this.http.get<any>(url);
+    }
+    getPopData(countryCode: string): Observable<any> {
+      
+      const pop = `${this.popUrl}/${countryCode}/indicator/SP.POP.TOTL?format=json`
+      console.log(pop) 
+      return this.http.get<any>(pop);
+    }
     private handleError(error:any){
       console.log(error);
       return error;
