@@ -1,18 +1,29 @@
+<<<<<<< HEAD
 import { HttpClient } from '@angular/common/http';
 import { Component, AfterViewInit, Renderer2, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ApiService } from './api.service';
+=======
+
+import { Component, AfterViewInit, Renderer2 } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+>>>>>>> origin/main
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
+<<<<<<< HEAD
   imports: [RouterOutlet, CommonModule],
+=======
+  imports: [RouterOutlet],
+>>>>>>> origin/main
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements AfterViewInit {
+<<<<<<< HEAD
   
   apiService = inject(ApiService)
   
@@ -35,6 +46,10 @@ export class AppComponent implements AfterViewInit {
 
   }
   
+=======
+  constructor(private renderer: Renderer2) {}
+
+>>>>>>> origin/main
   ngAfterViewInit() {
     const svgObject = this.renderer.selectRootElement('#svgMap');
     svgObject.addEventListener('load', () => {
