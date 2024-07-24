@@ -60,7 +60,7 @@ export class AppComponent implements AfterViewInit {
               this.capital = data[1][0]['capitalCity'];
               this.region =  data[1][0]['region']['value'];
               this.income =  data[1][0]['incomeLevel']['value'];
-              this.coords = `${ data[1][0]['latitude']} ,  ${data[1][0]['longitude']}`
+              this.coords = `${ data[1][0]['latitude']} ,  ${ data[1][0]['longitude']}`
               this.cdr.detectChanges();
             },
             error: (err) => {
