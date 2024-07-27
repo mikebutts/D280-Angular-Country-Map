@@ -1,0 +1,22 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left-panel {
+    flex: 0 0 20%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 20% */
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 20px;
+}
+
+.right-panel {
+    flex: 1; /* Flex-grow: 1 */
+    background-color: #d0d0d0; /* Darker gray background */
+    padding: 20px;
+}
