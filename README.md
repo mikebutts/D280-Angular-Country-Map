@@ -1,6 +1,8 @@
-<<<<<<< HEAD
+Student ID: 000339844
+Angular: 18.1.1
+
+
 # D280-Angular-Country-Map
-=======
 # D280
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.7.
